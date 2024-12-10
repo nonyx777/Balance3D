@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4ka7i1nyedp"]
+
+[ext_resource type="Script" path="res://scripts/disc.gd" id="1_knvn7"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_81jsi"]
+height = 0.1
+radius = 1.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5rqrq"]
+top_radius = 1.5
+bottom_radius = 1.5
+height = 0.1
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_knvn7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_81jsi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_5rqrq")

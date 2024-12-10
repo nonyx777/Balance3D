@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bivfm4wpxbf2s"]
+
+[ext_resource type="PackedScene" uid="uid://d4ka7i1nyedp" path="res://scenes/disc.tscn" id="1_cv8n1"]
+[ext_resource type="PackedScene" uid="uid://kmdkwrwgwn7p" path="res://scenes/ball.tscn" id="2_gi288"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.921009, 0.389542, 0, -0.389542, 0.921009, 0, 0.993208, 2.29333)
+
+[node name="Disc" parent="." instance=ExtResource("1_cv8n1")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
+
+[node name="Ball" parent="." instance=ExtResource("2_gi288")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.649477, 0)
