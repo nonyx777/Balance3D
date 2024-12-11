@@ -11,7 +11,7 @@ top_radius = 1.5
 bottom_radius = 1.5
 height = 0.1
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Disc" type="CharacterBody3D"]
 script = ExtResource("1_knvn7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

@@ -12,6 +12,7 @@ transform = Transform3D(1, 0, 0, 0, 0.921009, 0.389542, 0, -0.389542, 0.921009, 
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
+shadow_enabled = true
 
 [node name="Ball" parent="." instance=ExtResource("2_gi288")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.649477, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299953, 0.440902, 0.324911)
