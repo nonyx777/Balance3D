@@ -15,4 +15,4 @@ transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Ball" parent="." instance=ExtResource("2_gi288")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.299953, 0.440902, 0.324911)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05101, 2.02311, 0.263556)
