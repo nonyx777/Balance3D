@@ -1,8 +1,8 @@
 extends CharacterBody3D
 @onready var ball: RigidBody3D = $"../Ball"
-@onready var collision_shape_3d: CollisionShape3D = $CollisionShape3D
+@onready var collision: CollisionShape3D = $CollisionShape3D
 @export var max_angle: float = PI/6
-@export var snappiness: float = 1
+@export var snappiness: float = 1.05
 
 var new_transform = Transform3D()
 var position_tobe = Vector3()
@@ -18,7 +18,7 @@ func _physics_process(delta: float):
 	if rotation_axis == Vector3.ZERO:
 		return
 	
-	var desired_rotation = Basis(rotation_axis.normalized(), -max_angle * length / collision_shape_3d.shape.radius)
+	var desired_rotation = Basis(rotation_axis.normalized(), -max_angle * length / collision.shape.radius)
 	new_transform = transform
 	new_transform.basis = new_transform.basis.slerp(desired_rotation, snappiness * delta)
 	transform = new_transform
